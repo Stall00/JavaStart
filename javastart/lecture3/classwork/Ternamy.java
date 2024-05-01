@@ -5,7 +5,7 @@ public class Ternamy {
         int a = 3;
         int b = 7;
         int max;
-        max = (a>b) ? a : b;
+        max = (a > b) ? a : b;
         System.out.println(max);
     }
 }
