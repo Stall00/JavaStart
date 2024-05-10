@@ -18,20 +18,18 @@ public class Calculator {
 користувача
          */
 
-        double operand1 ;
-        double operand2 ;
+        double operand1;
+        double operand2;
 
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter number 1");
-        operand1 = Double.parseDouble(scan.next());
+        operand1 = scan.nextDouble();
 
-        Scanner scann = new Scanner(System.in);
         System.out.println("Enter number 2");
-        operand2 = Double.parseDouble(scann.next());
+        operand2 = scan.nextDouble();
 
-        Scanner sc = new Scanner(System.in);
         System.out.println("Enter operation : + - * / ");
-        String sign = sc.next();
+        String sign = scan.next();
 
         switch (sign) {
             case "+": {
@@ -47,13 +45,12 @@ public class Calculator {
                 break;
             }
             case "/": {
-                if (operand2 == 0) System.out.println("Infinity");
+                if (operand2 == 0) System.out.println("can't divide by zero");
                 else System.out.println(operand1 / operand2);
                 break;
             }
             default:
                 System.out.println("Wrong symbol");
-
         }
     }
 }
