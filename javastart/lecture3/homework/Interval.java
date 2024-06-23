@@ -12,20 +12,18 @@ public class Interval {
 користувач вказує число, що не входить до жодного з наявних числових проміжків, то
 виводиться відповідне повідомлення.
          */
-        double a;
-
         Scanner scan = new Scanner(System.in);
 
         System.out.println("Enter number 0-100");
 
-        a = (scan.nextDouble());
+        double a = (scan.nextDouble());
 
-        if (a < 0) System.out.println("the number must be greater than 0");
-        else if (a > 100) System.out.println("the number must not be greater than 100");
-        else if (a < 15) System.out.println("your number is between 0 - 14 ");
+
+        if (a < 15) System.out.println(" your number is between 0 - 14 ");
         else if (a < 36) System.out.println("your number is between 15 - 35 ");
         else if (a < 50) System.out.println("your number is between 36 - 50 ");
-        else System.out.println("your number is between 50 - 100 ");
+        else if (a <= 100) System.out.println("your number is between 50 - 100");
+        else System.out.println("your number is not in the range between 0 - 100 ");
 
     }
 }
